@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  a {
+    color:firebrick;
+  }
+</style>
+<div class="text-center">
+  <img class="mx-auto"src="https://image.tmdb.org/t/p/w342/{{ movie.backdrop_path }}" alt="movie_poster" style="width: 20rem;">
+  <h2>{{ movie.title }} - {{ movie.original_title }}</h2>
+  <div style="color: DarkGray">
+    <p>{{ movie.release_date }}</p>
+    {% for genre in movie.genres.all %}
+    <span>{{ genre.name }}/</span>
+    {% endfor %}
+  </div>
+</div>
+
+<p style="color: DarkGray">{{ movie.overview }}</p>
+<a href="{% url 'movies:review_form' movie.pk %}">NEW</a>
+
+<hr>
+<table class="table text-center text-white">
+  <thead>
+    <tr>
+      <th scope="col">리뷰 제목</th>
+      <th scope="col">평점</th>
+      <th scope="col">작성자</th>
+      <th scope="col">작성 시간</th>
+
+    </tr>
+  </thead>
+
+{% for review in movie.review_set.all %}
+  <tbody>
+    <tr>
+      <td><a href="{% url 'movies:review_detail' review.pk %}">{{ review.title }}</a></td>
+      <td>{{ review.rank }}</td>
+      <td><a href="{% url 'accounts:profile' review.user.username %}">{{ review.user }}</a></td>
+      <td>{{ review.created_at }}</td>
+    </tr>
+  </tbody>
+{% endfor %}
+</table>
+<a href="/movies/">BACK</a>
+
+
+{% endblock %}
+
+
+
+
+
+

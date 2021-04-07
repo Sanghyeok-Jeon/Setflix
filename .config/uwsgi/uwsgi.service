@@ -1,0 +1,31 @@
+[Unit]
+
+Description=uWSGI Service
+
+After=syslog.target
+
+
+
+[Service]
+
+User=ubuntu
+
+ExecStart=/home/ubuntu/.pyenv/versions/venv/bin/uwsgi -i /home/ubuntu/final_pjt/.config/uwsgi/final_pjt.ini
+
+
+
+Restart=always
+
+KillSignal=SIGQUIT
+
+Type=notify
+
+StandardError=syslog
+
+NotifyAccess=all
+
+
+
+[Install]
+
+WantedBy=multi-user.target

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="text-center">
+<div class="text-center text-danger my-3">
+  <p class="font-weight-bold" style="font-size: 2vw;">
+    {{ user.username }}님을 위한 {{ genre.name }} 장르 추천영화
+  </p>
+</div>
+  <div class="text-center text-danger mb-5">
+    <p class="font-weight-bold" style="font-size: 2vw;">
+      오늘은 이 영화 어떠세요?
+    </p>
+  </div>
+  {% for movie in movies %}
+    <div class="card text-white d-inline-flex m-0 p-0" style="width: 20rem; background-color: black;">
+      <a href="{% url 'movies:movie_detail' movie.pk %}">
+          <img src="https://image.tmdb.org/t/p/w342/{{ movie.poster_path }}" alt="movie_poster" style="width: 20rem; height: 30rem;">
+      </a>
+      <div class="card-body">
+        <span class="text-light">{{ movie.title }}</span>
+        <span class="badge badge-pill badge-secondary">{{ movie.vote_average }}</span> 
+        <a class="btn btn-outline-danger ml-2 rounded-lg" href="{% url 'movies:movie_detail' movie.pk %}" role="button">i</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

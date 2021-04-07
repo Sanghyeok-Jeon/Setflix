@@ -1,0 +1,323 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 15:33:26 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x55a75b173990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a75b173990 pid: 28555 (default app)
+spawned uWSGI master process (pid: 28555)
+spawned uWSGI worker 1 (pid: 28571, cores: 1)
+subprocess 28556 exited with code 0
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/final_pjt/tmp/final_pjt.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 15:33:44 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x564d2751d990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x564d2751d990 pid: 28753 (default app)
+spawned uWSGI master process (pid: 28753)
+spawned uWSGI worker 1 (pid: 28768, cores: 1)
+subprocess 28763 exited with code 0
+[pid: 28768|app: 0|req: 1/1] 14.45.55.179 () {40 vars in 769 bytes} [Fri Jun 19 00:34:02 2020] GET /movies => generated 0 bytes in 164 msecs (HTTP/1.1 301) 3 headers in 113 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 2/2] 14.45.55.179 () {38 vars in 621 bytes} [Fri Jun 19 00:34:02 2020] GET /robots.txt => generated 77 bytes in 46 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 3/3] 14.45.55.179 () {40 vars in 771 bytes} [Fri Jun 19 00:34:02 2020] GET /movies/ => generated 39570 bytes in 145 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 4/4] 14.45.55.179 () {40 vars in 703 bytes} [Fri Jun 19 00:34:03 2020] GET /favicon.ico => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 5/5] 14.45.55.179 () {42 vars in 829 bytes} [Fri Jun 19 00:34:06 2020] GET /account/signup => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 121 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 6/6] 14.45.55.179 () {42 vars in 831 bytes} [Fri Jun 19 00:34:06 2020] GET /account/signup/ => generated 4167 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 7/7] 14.45.55.179 () {44 vars in 924 bytes} [Fri Jun 19 00:34:07 2020] GET /account/login => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 8/8] 14.45.55.179 () {44 vars in 926 bytes} [Fri Jun 19 00:34:07 2020] GET /account/login/ => generated 4522 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 9/9] 14.45.55.179 () {44 vars in 964 bytes} [Fri Jun 19 00:34:11 2020] GET /account/kakao/login/?process=login => generated 0 bytes in 12 msecs (HTTP/1.1 302) 6 headers in 488 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 10/10] 14.45.55.179 () {44 vars in 970 bytes} [Fri Jun 19 00:34:25 2020] GET /account/login/ => generated 4522 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 11/11] 14.45.55.179 () {52 vars in 1152 bytes} [Fri Jun 19 00:34:52 2020] POST /account/login/ => generated 0 bytes in 112 msecs (HTTP/1.1 302) 8 headers in 621 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 12/12] 14.45.55.179 () {46 vars in 1161 bytes} [Fri Jun 19 00:34:52 2020] GET /movies/ => generated 39593 bytes in 78 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 13/13] 14.45.55.179 () {44 vars in 1141 bytes} [Fri Jun 19 00:34:55 2020] GET /accounts/dkdlel/ => generated 5232 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 14/14] 14.45.55.179 () {44 vars in 1152 bytes} [Fri Jun 19 00:34:58 2020] GET /movies/community/ => generated 9013 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 15/15] 14.45.55.179 () {44 vars in 1173 bytes} [Fri Jun 19 00:35:00 2020] GET /movies/429617/movie_detail/ => generated 5016 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 16/16] 14.45.55.179 () {44 vars in 1181 bytes} [Fri Jun 19 00:35:01 2020] GET /movies/429617/review_form/ => generated 4156 bytes in 77 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 17/17] 14.45.55.179 () {44 vars in 1162 bytes} [Fri Jun 19 00:35:03 2020] GET /movies/community/ => generated 9013 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 18/18] 14.45.55.179 () {44 vars in 1175 bytes} [Fri Jun 19 00:35:06 2020] GET /accounts/%EB%B2%84%EA%B1%B0%EC%99%95/ => generated 8166 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 19/19] 14.45.55.179 () {44 vars in 1225 bytes} [Fri Jun 19 00:35:15 2020] GET /accounts/%EB%B2%84%EA%B1%B0%EC%99%95/followerswings/ => generated 4089 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 20/20] 14.45.55.179 () {44 vars in 1258 bytes} [Fri Jun 19 00:35:17 2020] GET /accounts/%ED%94%84%EB%A1%9C%ED%95%84%EB%B3%80%EA%B2%BD%EC%99%84%EB%A3%8C/ => generated 6555 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 21/21] 14.45.55.179 () {44 vars in 1293 bytes} [Fri Jun 19 00:35:19 2020] GET /accounts/%ED%94%84%EB%A1%9C%ED%95%84%EB%B3%80%EA%B2%BD%EC%99%84%EB%A3%8C/follow/ => generated 0 bytes in 11 msecs (HTTP/1.1 302) 5 headers in 210 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 22/22] 14.45.55.179 () {44 vars in 1279 bytes} [Fri Jun 19 00:35:19 2020] GET /accounts/%ED%94%84%EB%A1%9C%ED%95%84%EB%B3%80%EA%B2%BD%EC%99%84%EB%A3%8C/ => generated 6562 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 23/23] 14.45.55.179 () {44 vars in 1211 bytes} [Fri Jun 19 00:35:22 2020] GET /movies/recommend1/ => generated 8769 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 24/24] 14.45.55.179 () {44 vars in 1174 bytes} [Fri Jun 19 00:35:24 2020] GET /movies/recommend1/anything/ => generated 5566 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 25/25] 14.45.55.179 () {44 vars in 1143 bytes} [Fri Jun 19 00:35:32 2020] GET /movies/ => generated 39669 bytes in 79 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 26/26] 14.45.55.179 () {44 vars in 1159 bytes} [Fri Jun 19 00:35:35 2020] GET /movies/4935/movie_detail/ => generated 4822 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 27/27] 14.45.55.179 () {44 vars in 1149 bytes} [Fri Jun 19 00:35:38 2020] GET /movies/recommend/12/ => generated 5391 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 28/28] 14.45.55.179 () {44 vars in 1141 bytes} [Fri Jun 19 00:35:44 2020] GET /accounts/dkdlel/ => generated 5232 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 29/29] 14.45.55.179 () {44 vars in 1180 bytes} [Fri Jun 19 00:35:46 2020] GET /accounts/dkdlel/profile_update/ => generated 4113 bytes in 11 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 30/30] 14.45.55.179 () {44 vars in 1180 bytes} [Fri Jun 19 00:35:47 2020] GET /accounts/dkdlel/account_update/ => generated 5388 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 31/31] 14.45.55.179 () {44 vars in 1180 bytes} [Fri Jun 19 00:35:52 2020] GET /accounts/dkdlel/account_update/ => generated 5388 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 32/32] 14.45.55.179 () {52 vars in 1448 bytes} [Fri Jun 19 00:36:06 2020] POST /accounts/dkdlel/account_update/ => generated 0 bytes in 106 msecs (HTTP/1.1 302) 6 headers in 248 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 33/33] 14.45.55.179 () {46 vars in 1208 bytes} [Fri Jun 19 00:36:06 2020] GET /accounts/tkdydwkdlfma/ => generated 5280 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 34/34] 14.45.55.179 () {44 vars in 1138 bytes} [Fri Jun 19 00:36:19 2020] GET /movies/ => generated 39685 bytes in 78 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 35/35] 14.45.55.179 () {44 vars in 1137 bytes} [Fri Jun 19 00:36:24 2020] GET /account/logout => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 121 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 36/36] 14.45.55.179 () {44 vars in 1139 bytes} [Fri Jun 19 00:36:24 2020] GET /account/logout/ => generated 3571 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/final_pjt/tmp/final_pjt.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 15:39:40 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x55e5146a3990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e5146a3990 pid: 29900 (default app)
+spawned uWSGI master process (pid: 29900)
+spawned uWSGI worker 1 (pid: 29916, cores: 1)
+subprocess 29911 exited with code 0
+[pid: 29916|app: 0|req: 1/1] 14.45.55.179 () {46 vars in 1169 bytes} [Fri Jun 19 00:39:44 2020] GET /movies/ => generated 39592 bytes in 247 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 29916|app: 0|req: 2/2] 14.45.55.179 () {44 vars in 1153 bytes} [Fri Jun 19 00:39:46 2020] GET /accounts/tkdydwkdlfma/ => generated 5280 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 29916|app: 0|req: 3/3] 14.45.55.179 () {44 vars in 1154 bytes} [Fri Jun 19 00:39:48 2020] GET /account/logout/ => generated 3571 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 16:50:36 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x562b5ad60990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562b5ad60990 pid: 2479 (default app)
+spawned uWSGI master process (pid: 2479)
+spawned uWSGI worker 1 (pid: 2495, cores: 1)
+subprocess 2490 exited with code 0
+[pid: 2495|app: 0|req: 1/1] 14.45.55.179 () {46 vars in 1275 bytes} [Fri Jun 19 01:50:39 2020] GET /account/login/ => generated 4522 bytes in 161 msecs (HTTP/1.1 200) 6 headers in 377 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 2/2] 14.45.55.179 () {44 vars in 1193 bytes} [Fri Jun 19 01:50:41 2020] GET /movies/ => generated 39459 bytes in 89 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 3/3] 14.45.55.179 () {44 vars in 1200 bytes} [Fri Jun 19 01:50:44 2020] GET /account/login/ => generated 4522 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 4/4] 14.45.55.179 () {44 vars in 1209 bytes} [Fri Jun 19 01:50:46 2020] GET /account/signup/ => generated 4167 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 5/5] 14.45.55.179 () {44 vars in 1208 bytes} [Fri Jun 19 01:50:47 2020] GET /account/login/ => generated 4522 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 6/6] 14.45.55.179 () {44 vars in 1209 bytes} [Fri Jun 19 01:50:50 2020] GET /account/signup/ => generated 4167 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 7/7] 14.45.55.179 () {44 vars in 1208 bytes} [Fri Jun 19 01:50:52 2020] GET /account/login/ => generated 4522 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 8/8] 39.116.122.38 () {42 vars in 889 bytes} [Fri Jun 19 01:56:09 2020] GET /movies/ => generated 39488 bytes in 76 msecs (HTTP/1.1 200) 4 headers in 196 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 9/9] 39.116.122.38 () {42 vars in 777 bytes} [Fri Jun 19 01:56:09 2020] GET /favicon.ico => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 10/10] 39.116.122.38 () {44 vars in 903 bytes} [Fri Jun 19 01:56:11 2020] GET /account/login/ => generated 4522 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 11/11] 39.116.122.38 () {44 vars in 896 bytes} [Fri Jun 19 01:56:12 2020] GET /movies/ => generated 39564 bytes in 77 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 12/12] 193.118.53.194 () {34 vars in 490 bytes} [Fri Jun 19 02:02:44 2020] GET / => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 13/13] 220.248.20.74 () {34 vars in 502 bytes} [Fri Jun 19 02:05:34 2020] GET /TP/public/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 14/14] 220.248.20.74 () {34 vars in 488 bytes} [Fri Jun 19 02:05:34 2020] GET /TP/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 15/15] 220.248.20.74 () {34 vars in 524 bytes} [Fri Jun 19 02:05:34 2020] GET /thinkphp/html/public/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 16/16] 220.248.20.74 () {34 vars in 506 bytes} [Fri Jun 19 02:05:35 2020] GET /html/public/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 17/17] 220.248.20.74 () {34 vars in 496 bytes} [Fri Jun 19 02:05:35 2020] GET /public/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 18/18] 220.248.20.74 () {34 vars in 512 bytes} [Fri Jun 19 02:05:35 2020] GET /TP/html/public/index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 19/19] 220.248.20.74 () {34 vars in 484 bytes} [Fri Jun 19 02:05:35 2020] GET /elrekt.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 20/20] 220.248.20.74 () {34 vars in 482 bytes} [Fri Jun 19 02:05:35 2020] GET /index.php => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 2495|app: 0|req: 21/21] 220.248.20.74 () {34 vars in 467 bytes} [Fri Jun 19 02:05:36 2020] GET / => generated 77 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/final_pjt/tmp/final_pjt.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 17:06:24 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x55b9e9b17990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b9e9b17990 pid: 3424 (default app)
+spawned uWSGI master process (pid: 3424)
+spawned uWSGI worker 1 (pid: 3440, cores: 1)
+subprocess 3435 exited with code 0
+[pid: 3440|app: 0|req: 1/1] 14.45.55.179 () {44 vars in 1193 bytes} [Fri Jun 19 02:06:28 2020] GET /movies/ => generated 39544 bytes in 307 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3440|app: 0|req: 2/2] 14.45.55.179 () {44 vars in 1200 bytes} [Fri Jun 19 02:06:30 2020] GET /account/login/ => generated 4521 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 3440|app: 0|req: 3/3] 211.229.20.178 () {44 vars in 1197 bytes} [Fri Jun 19 02:07:11 2020] GET /account/login/ => generated 4521 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 3440|app: 0|req: 4/4] 94.177.214.123 () {48 vars in 879 bytes} [Fri Jun 19 02:07:43 2020] POST /boaform/admin/formLogin => generated 77 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 3440|app: 0|req: 5/5] 39.116.122.38 () {42 vars in 845 bytes} [Fri Jun 19 02:10:05 2020] GET /movies/ => generated 39526 bytes in 75 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 3440|app: 0|req: 6/6] 39.116.122.38 () {44 vars in 903 bytes} [Fri Jun 19 02:10:07 2020] GET /account/login/ => generated 4521 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/final_pjt/tmp/final_pjt.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jun 18 17:16:05 2020] ***
+compiled with version: 7.5.0 on 18 June 2020 15:31:38
+os: Linux-4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018
+nodename: ip-172-26-3-20
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /home/ubuntu/final_pjt/tmp/final_pjt.pid
+detected binary path: /home/ubuntu/.pyenv/versions/3.7.4/envs/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/final_pjt
+your processes number limit is 1825
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/final_pjt/tmp/final_pjt.sock fd 4
+Python version: 3.7.4 (default, Jun 18 2020, 15:03:57)  [GCC 7.5.0]
+PEP 405 virtualenv detected: /home/ubuntu/.pyenv/versions/venv
+Set PythonHome to /home/ubuntu/.pyenv/versions/venv
+Python main interpreter initialized at 0x55d9ab1ab990
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d9ab1ab990 pid: 4423 (default app)
+spawned uWSGI master process (pid: 4423)
+spawned uWSGI worker 1 (pid: 4440, cores: 1)
+subprocess 4433 exited with code 0
+[pid: 4440|app: 0|req: 1/1] 14.45.55.179 () {46 vars in 1224 bytes} [Fri Jun 19 02:16:10 2020] GET /movies/ => generated 39329 bytes in 226 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 2/2] 14.45.55.179 () {44 vars in 1200 bytes} [Fri Jun 19 02:16:12 2020] GET /account/login/ => generated 4521 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 3/3] 39.116.122.38 () {46 vars in 927 bytes} [Fri Jun 19 02:17:55 2020] GET /movies/ => generated 39524 bytes in 75 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 4/4] 39.116.122.38 () {44 vars in 903 bytes} [Fri Jun 19 02:17:57 2020] GET /account/login/ => generated 4521 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 5/5] 39.116.122.38 () {44 vars in 916 bytes} [Fri Jun 19 02:18:02 2020] GET /movies/community/ => generated 8881 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 6/6] 14.45.55.179 () {44 vars in 1246 bytes} [Fri Jun 19 02:20:19 2020] GET /account/kakao/login/?process=login => generated 0 bytes in 8 msecs (HTTP/1.1 302) 6 headers in 488 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 7/7] 14.45.55.179 () {44 vars in 1244 bytes} [Fri Jun 19 02:21:04 2020] GET /account/login/ => generated 4521 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 8/8] 14.45.55.179 () {44 vars in 1290 bytes} [Fri Jun 19 02:21:06 2020] GET /account/kakao/login/?process=login => generated 0 bytes in 8 msecs (HTTP/1.1 302) 6 headers in 488 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 9/9] 14.45.55.179 () {44 vars in 1502 bytes} [Fri Jun 19 02:21:06 2020] GET /account/kakao/login/callback/?code=1XvT_j_62cR__IHTP56247p-3_8RaakmRAdFWpSOb4xBXJmPRQ9oc62lo-ii-3VgEUJ8jwopyNkAAAFyyHLO5w&state=dGPEgUP0DZQI => generated 0 bytes in 137 msecs (HTTP/1.1 302) 8 headers in 923 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 10/10] 14.45.55.179 () {44 vars in 1375 bytes} [Fri Jun 19 02:21:07 2020] GET /movies/ => generated 39632 bytes in 79 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 11/11] 14.45.55.179 () {44 vars in 1384 bytes} [Fri Jun 19 02:21:13 2020] GET /account/logout/ => generated 3582 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 12/12] 14.45.55.179 () {52 vars in 1573 bytes} [Fri Jun 19 02:22:26 2020] POST /account/logout/ => generated 0 bytes in 10 msecs (HTTP/1.1 302) 6 headers in 789 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 13/13] 14.45.55.179 () {46 vars in 1471 bytes} [Fri Jun 19 02:22:26 2020] GET /movies/ => generated 39466 bytes in 75 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 14/14] 14.45.55.179 () {44 vars in 1446 bytes} [Fri Jun 19 02:22:28 2020] GET /account/login/ => generated 4521 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 15/15] 14.45.55.179 () {44 vars in 1494 bytes} [Fri Jun 19 02:22:32 2020] GET /account/github/login/?process=login => generated 0 bytes in 8 msecs (HTTP/1.1 302) 6 headers in 478 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 16/16] 14.45.55.179 () {44 vars in 1618 bytes} [Fri Jun 19 02:22:32 2020] GET /account/github/login/callback/?code=eccc8ee06add36bf7df9&state=3mxDhTmEX1jl => generated 0 bytes in 890 msecs (HTTP/1.1 302) 8 headers in 1157 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 17/17] 14.45.55.179 () {44 vars in 1609 bytes} [Fri Jun 19 02:22:33 2020] GET /movies/ => generated 39565 bytes in 79 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 18/18] 14.45.55.179 () {44 vars in 1626 bytes} [Fri Jun 19 02:22:36 2020] GET /accounts/houek0307/ => generated 5255 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 19/19] 14.45.55.179 () {44 vars in 1630 bytes} [Fri Jun 19 02:22:38 2020] GET /account/logout/ => generated 3564 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 20/20] 14.45.55.179 () {52 vars in 1807 bytes} [Fri Jun 19 02:22:41 2020] POST /account/logout/ => generated 0 bytes in 10 msecs (HTTP/1.1 302) 6 headers in 1023 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 21/21] 14.45.55.179 () {46 vars in 1705 bytes} [Fri Jun 19 02:22:41 2020] GET /movies/ => generated 39563 bytes in 78 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 22/22] 14.45.55.179 () {44 vars in 1682 bytes} [Fri Jun 19 02:23:17 2020] GET /account/signup/ => generated 4166 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 23/23] 14.45.55.179 () {42 vars in 1618 bytes} [Fri Jun 19 02:23:49 2020] GET /admin => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 24/24] 14.45.55.179 () {42 vars in 1620 bytes} [Fri Jun 19 02:23:49 2020] GET /admin/ => generated 0 bytes in 16 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 25/25] 14.45.55.179 () {42 vars in 1657 bytes} [Fri Jun 19 02:23:49 2020] GET /admin/login/?next=/admin/ => generated 2369 bytes in 17 msecs (HTTP/1.1 200) 8 headers in 479 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 26/26] 14.45.55.179 () {52 vars in 1139 bytes} [Fri Jun 19 02:23:53 2020] POST /admin/login/?next=/admin/ => generated 0 bytes in 97 msecs (HTTP/1.1 302) 9 headers in 559 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 27/27] 14.45.55.179 () {46 vars in 994 bytes} [Fri Jun 19 02:23:53 2020] GET /admin/ => generated 11504 bytes in 22 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 28/28] 14.45.55.179 () {44 vars in 966 bytes} [Fri Jun 19 02:23:57 2020] GET /admin/sites/site/ => generated 5534 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 29/29] 14.45.55.179 () {42 vars in 813 bytes} [Fri Jun 19 02:23:57 2020] GET /admin/jsi18n/ => generated 8292 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 30/30] 14.45.55.179 () {44 vars in 985 bytes} [Fri Jun 19 02:24:03 2020] GET /admin/sites/site/add/ => generated 4540 bytes in 24 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 31/31] 14.45.55.179 () {42 vars in 817 bytes} [Fri Jun 19 02:24:03 2020] GET /admin/jsi18n/ => generated 8292 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 32/32] 14.45.55.179 () {52 vars in 1172 bytes} [Fri Jun 19 02:24:12 2020] POST /admin/sites/site/add/ => generated 0 bytes in 11 msecs (HTTP/1.1 302) 8 headers in 590 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 33/33] 14.45.55.179 () {46 vars in 1300 bytes} [Fri Jun 19 02:24:12 2020] GET /admin/sites/site/ => generated 6022 bytes in 14 msecs (HTTP/1.1 200) 8 headers in 479 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 34/34] 14.45.55.179 () {42 vars in 813 bytes} [Fri Jun 19 02:24:12 2020] GET /admin/jsi18n/ => generated 8292 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 35/35] 14.45.55.179 () {44 vars in 955 bytes} [Fri Jun 19 02:24:18 2020] GET /admin/ => generated 11803 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 36/36] 14.45.55.179 () {44 vars in 992 bytes} [Fri Jun 19 02:24:21 2020] GET /admin/socialaccount/socialapp/ => generated 5349 bytes in 18 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 37/37] 14.45.55.179 () {42 vars in 826 bytes} [Fri Jun 19 02:24:21 2020] GET /admin/jsi18n/ => generated 8292 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 38/38] 14.45.55.179 () {44 vars in 1034 bytes} [Fri Jun 19 02:24:26 2020] GET /admin/socialaccount/socialapp/3/change/ => generated 8051 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 39/39] 14.45.55.179 () {42 vars in 835 bytes} [Fri Jun 19 02:24:26 2020] GET /admin/jsi18n/ => generated 8292 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 40/40] 14.45.55.179 () {52 vars in 1226 bytes} [Fri Jun 19 02:24:32 2020] POST /admin/socialaccount/socialapp/3/change/ => generated 0 bytes in 18 msecs (HTTP/1.1 302) 8 headers in 642 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 41/41] 14.45.55.179 () {46 vars in 1383 bytes} [Fri Jun 19 02:24:32 2020] GET /admin/socialaccount/socialapp/ => generated 5577 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 479 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 42/42] 14.45.55.179 () {42 vars in 826 bytes} [Fri Jun 19 02:24:33 2020] GET /admin/jsi18n/ => generated 8292 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 43/43] 14.45.55.179 () {44 vars in 1034 bytes} [Fri Jun 19 02:24:34 2020] GET /admin/socialaccount/socialapp/2/change/ => generated 8012 bytes in 22 msecs (HTTP/1.1 200) 7 headers in 395 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 44/44] 14.45.55.179 () {42 vars in 835 bytes} [Fri Jun 19 02:24:35 2020] GET /admin/jsi18n/ => generated 8292 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 45/45] 14.45.55.179 () {52 vars in 1226 bytes} [Fri Jun 19 02:24:40 2020] POST /admin/socialaccount/socialapp/2/change/ => generated 0 bytes in 17 msecs (HTTP/1.1 302) 8 headers in 641 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 46/46] 14.45.55.179 () {46 vars in 1382 bytes} [Fri Jun 19 02:24:40 2020] GET /admin/socialaccount/socialapp/ => generated 5576 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 479 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 47/47] 14.45.55.179 () {42 vars in 826 bytes} [Fri Jun 19 02:24:40 2020] GET /admin/jsi18n/ => generated 8292 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 132 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 48/48] 14.45.55.179 () {42 vars in 903 bytes} [Fri Jun 19 02:24:55 2020] GET /movies/ => generated 39563 bytes in 78 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 49/49] 14.45.55.179 () {44 vars in 963 bytes} [Fri Jun 19 02:25:06 2020] GET /account/logout/ => generated 3556 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 50/50] 14.45.55.179 () {52 vars in 1152 bytes} [Fri Jun 19 02:25:08 2020] POST /account/logout/ => generated 0 bytes in 8 msecs (HTTP/1.1 302) 6 headers in 420 bytes (1 switches on core 0)
+[pid: 4440|app: 0|req: 51/51] 14.45.55.179 () {46 vars in 1102 bytes} [Fri Jun 19 02:25:08 2020] GET /movies/ => generated 39550 bytes in 76 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div class="text-center text-danger my-3">
+  <p class="font-weight-bold" style="font-size: 2vw;">
+    {{ user.username }}님을 위한 추천영화
+  </p>
+</div>
+<div class="progress mb-3 bg-dark">
+  <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+</div>
+<div class="text-center text-danger my-3">
+  <p class="font-weight-bold" style="font-size: 2vw;">
+    다음 질문을 드리겠습니다.
+  </p>
+  <p class="font-weight-bold" style="font-size: 2vw;">
+    한국영화를 원하시나요?
+  </p>
+</div>
+<div class="btn-toolbar d-inline-flex mx-auto" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group m-2" role="group" aria-label="First group">
+    <a href="{% url 'movies:recommend3' genre_pk=genre.pk nation='ko' %}">
+      <button type="button" class="btn btn-danger">
+        Yes
+      </button>
+    </a>
+  </div>
+  <div class="btn-group m-2" role="group" aria-label="Second group">
+    <a href="{% url 'movies:recommend3' genre_pk=genre.pk nation='nko' %}">
+      <button type="button" class="btn btn-danger">
+        No
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
+{% endblock %}

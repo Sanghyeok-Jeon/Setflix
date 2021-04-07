@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load i18n %}
+{% load account socialaccount %}
+{% load socialaccount %}
+{% get_providers as socialaccount_providers %}
+
+{% block content %}
+<div class="w-50 m-auto">
+  <br>
+  <h1>{% trans "Sign In" %}</h1>
+  <br>
+
+  {% get_providers as socialaccount_providers %}
+
+  <form class="login" method="POST" action="{% url 'accounts:login' %}">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="text-center">
+      <button class="primaryAction btn btn-danger w-100" type="submit">{% trans "Sign In" %}</button>
+      
+      <!-- {% if socialaccount_providers %}
+      <div class="socialaccount_ballot">
+    
+        <ul class="socialaccount_providers list-unstyled text-danger">
+          <!-- {% include "socialaccount/snippets/provider_list.html" with process="login" %} -->
+        <!-- </ul>
+    
+      </div> -->
+      <div class="socialaccount_ballot">
+        <ul class="socialaccount_providers list-unstyled text-danger">
+          {% for provider in socialaccount_providers %}
+          <li class="list-style mt-2">
+            {% if provider.name == 'Google' %}
+              <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} text-white" 
+                href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <button class="w-100 btn btn-primary" type="button">
+                  {{provider.name}}
+                </button>
+              </a>
+            {% elif provider.name == 'Kakao' %}
+              <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} text-dark" 
+                href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <button class="w-100 btn btn-warning" type="button">
+                  {{provider.name}}
+                </button>
+              </a>
+            {% else %}
+              <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} text-white" 
+                href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+                <button class="w-100 btn btn-dark" type="button">
+                  {{provider.name}}
+                </button>
+              </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+
+
+    
+      {% include "socialaccount/snippets/login_extra.html" %}
+    
+      {% else %}
+      <p>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+      {% endif %}
+    </div>
+    <a href="{% url 'accounts:signup' %}" class="button text-danger secondaryAction">아직 계정이 없으신가요?</a>
+  </form>
+</div>
+{% endblock %}

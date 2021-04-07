@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load bootstrap_pagination %}
+
+{% block content %}
+<style>
+	.pagination {
+		justify-content: center;
+	}
+	
+</style>
+<h1 class="font-weight-bold text-center" style="font-family: sans-serif; color: firebrick;">Commuity</h1>
+
+<hr>
+<table class="table text-white">
+	<thead>
+		<tr>
+			<th scope="col">영화 제목</th>
+			<th scope="col">리뷰</th>
+			<th scope="col">평점</th>
+			<th scope="col">작성자</th>
+			<th scope="col">작성 시간</th>
+		</tr>
+	</thead>
+
+{% for review in page_obj %}
+	<tbody>
+		<tr>
+			<td>
+				<a href="{% url 'movies:movie_detail' review.movie_title.pk %}" style="color: firebrick; font-weight: bold;">{{ review.movie_title.title }}</a></td>
+			</td>
+			<td><a href="{% url 'movies:review_detail' review.pk %}" class="text-white">{{ review.title }}</a></td>
+			<td>{{ review.rank }}</td>
+			<td><a href="{% url 'accounts:profile' review.user.username %}" style="color: firebrick; font-weight: bold;">{{ review.user }}</a></td>
+			<td>{{ review.created_at }}</td>
+		</tr>
+	</tbody>
+{% endfor %}
+</table>
+ 
+<a href="/movies" style="color: firebrick;">Back</a>
+
+{% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
+
+<div class="pagination d-flex justfy-content-center">
+  <span class="step-links">
+    {% if page_obj.has_previous %}
+      <a href="?page=1" style="color: firebrick;">&laquo; first</a>
+      <a href="?page={{ page_obj.previous_page_number }}" style="color: firebrick;">previous</a>
+    {% endif %}
+
+    <span class="current text-white">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
+
+    {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}" style="color: firebrick;">next</a>
+      <a href="?page={{ page_obj.paginator.num_pages }}" style="color: firebrick;">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>
+{% endblock %}

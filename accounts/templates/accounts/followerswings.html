@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<p style="font-size: 3vw;">{{ person.username }}'s followers : {{ person.followers.all|length }}</p>
+<hr class="bg-white mb-2">
+{% for per in person.followers.all %}
+<a href="{% url 'accounts:profile' per.username %}" style="color: firebrick; font-weight: bold;"><p class="m-0" style="font-size: 1vw;">{{ per.username }}</p></a>
+{% endfor %}
+<hr class="bg-white my-2">
+<br>
+<br>
+<p style="font-size: 3vw;">{{ person.username }}'s followings : {{ person.followings.all|length }}</p>
+<hr class="bg-white mb-2">
+{% for per in person.followings.all %}
+  <a href="{% url 'accounts:profile' per.username %}" style="color: firebrick; font-weight: bold;"><p class="m-0" style="font-size: 1vw;">{{ per.username }}</p></a>
+{% endfor %}
+<hr class="bg-white my-2">
+
+{% endblock %}

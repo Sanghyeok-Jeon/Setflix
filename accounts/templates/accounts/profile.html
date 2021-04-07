@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <br>
+  <div class="text-center">
+    <h1 class="text-center">{{ person.username }}</h1>
+    {% if user == person %}
+      <div class="text-center d-flex justify-content-center">
+        <a class="mr-5" href="{% url 'accounts:profile_update' person.username %}" style="color: red;">
+          Profile Edit
+        </a>
+        <a href="{% url 'accounts:account_update' person.username %}" style="color: red;">
+          Account Edit
+        </a>
+      </div>
+    {% endif %}
+
+    {% if user != person %}
+      {% if user in person.followers.all %}
+      <a href="{% url 'accounts:follow' person.username %}"><button class="btn btn-success center" type="button">팔로우 취소</button></a>
+      {% else %}
+      <a href="{% url 'accounts:follow' person.username %}"><button class="btn btn-success center" type="button">팔로우</button></a>
+      {% endif %}
+    {% endif %}
+  </div>
+  <br>
+  
+
+  <div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-4">
+            {% if person.profile.image %}
+              <img class="rounded-circle bg-white border border-white" src="{{ person.profile.image.url }}" style="width: 250px; height: 250px;">
+              <br>
+            {% else %}
+              <img class="rounded-circle bg-white border border-white" src="/media/emptyprofile.png" style="width: 250px; height: 250px;">
+              <br>
+            {% endif %}
+            
+        </div>
+        <div class="col-12 col-md-8 d-flex justify-content-center align-items-center">
+          <ul class="list-group list-group-horizontal text-center">
+            <li class="list-group-item bg-transparent border-0">
+              <p style="font-size: 5vw;">{{ reviews|length}}</p>
+            
+              <p style="font-size: 3vw;">게시물</p>
+            </li>
+            <li class="list-group-item bg-transparent border-0">
+              <a href="{% url 'accounts:followerswings' person.username %}" class="text-white"><p style="font-size: 5vw;">{{ person.followers.all|length }}</p></a>
+
+              <p style="font-size: 3vw;">팔로워</p>
+            </li>
+            <li class="list-group-item bg-transparent border-0">
+              <a href="{% url 'accounts:followerswings' person.username %}" class="text-white"><p style="font-size: 5vw;">{{ person.followings.all|length }}</p></a>
+
+              <p style="font-size: 3vw;">팔로잉</p>
+            </li>
+          </ul>
+        </div>
+        {% if person.profile.introduction %}
+          <hr class="bg-white my-2 w-100">
+          <div>
+              {{ person.profile.introduction }}
+          </div>
+          <hr class="bg-white mb-3 w-100">
+        {% endif %}
+    </div>
+  </div>
+  <br>
+
+  <h3 class="mb-3">{{ person.username }}'s Review</h3>
+  <table class="table">
+    <thead class="bg-dark text-center text-white">
+      <tr>
+        <th scope="col">영화 제목</th>
+        <th scope="col">리뷰 제목</th>
+        <th scope="col">평점</th>
+        <th scope="col">작성 시간</th>
+      </tr>
+    </thead>
+  
+  {% for review in reviews %}
+    <tbody class="text-center text-white">
+      <tr>
+        <td>
+          <a href="{% url 'movies:movie_detail' review.movie_title.pk %}" style="color: firebrick; font-weight: bold;">{{ review.movie_title.title }}</a></td>
+        </td>
+        <td><a href="{% url 'movies:review_detail' review.pk %}" style="color: firebrick; font-weight: bold;">{{ review.title }}</a></td>
+        <td>{{ review.rank }}</td>
+        <td>{{ review.created_at }}</td>
+      </tr>
+    </tbody>
+  {% endfor %}
+  </table>
+
+{% endblock %}

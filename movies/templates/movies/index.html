@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load list_shuffle %}
+
+{% block content %}
+<!-- <img src="/media/logo.gif" height="300" alt=""> -->
+<div class="text-center">
+  <a class="btn btn-outline-light mb-4" href="#" role="button">#NOW PLAYING</a>
+<br>
+<div class="nowplayings align-items-center"></div>
+<br>
+<a class="btn btn-outline-light mb-4" href="#" role="button">#TOP3</a>
+<br>
+<div class="todaymovies"></div>
+
+<hr>
+{% for genre in genres %}
+  {% if genre.movie_genre.all.count != 0 %}
+  <h4>
+    <a href="{% url 'movies:recommend_genre' genre.pk %}" class="btn btn-outline-light">#{{ genre.name }}</a>
+  </h4>
+  <br>
+  <div>
+    {% for mov in genre.movie_genre.all|shuffle_list %}
+      <div class="card text-white d-inline-flex m-0 p-0" style="width: 18vw; background-color: black;">
+        <a href="{% url 'movies:movie_detail' mov.pk %}">
+            <img class="w-100" src="https://image.tmdb.org/t/p/w342/{{ mov.poster_path }}" alt="movie_poster" style="height: 27vw;">
+        </a>
+        <div class="card-body">
+          <span class="text-light">{{ mov.title }}</span>
+          <span class="badge badge-pill badge-secondary">{{ mov.vote_average }}</span> 
+          <a class="btn btn-outline-danger ml-2 rounded-lg" href="{% url 'movies:movie_detail' mov.pk %}" role="button">i</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+  {% endif %}
+{% endfor %}
+<hr>
+</div>
+
+<script>
+  window.addEventListener('load', function(event){
+    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key={{MOVIES_API}}&language=ko-KR&page=1&region=KR')
+    .then(function(response){
+      // console.log(response.data.results)
+      const todayMovies = document.querySelector('.todaymovies')
+      results = response.data.results
+      for (var i=0; i<3; i++) {
+        const movieUrl = results[i].poster_path
+        const moviePosterLink = document.createElement('a')
+        const moviePoster = document.createElement('img')
+        moviePosterLink.setAttribute('href', `${results[i].id}/movie_detail/`)
+        moviePoster.src = `https://image.tmdb.org/t/p/w342/${movieUrl}`
+        moviePoster.style.height = '27vw'
+        moviePosterLink.append(moviePoster)
+        todayMovies.append(moviePosterLink)
+      }
+      // console.log(response.data.results[0].title)
+      // console.log(response.data.results[0].poster_path)
+    })
+    .catch(function(error){
+      console.log(error)
+    })
+  })
+  window.addEventListener('load', function(event){
+    axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key={{MOVIES_API}}&language=ko-KR&page=1')
+    .then(function(response){
+      // console.log(response.data.results)
+      const nowPlayings = document.querySelector('.nowplayings')
+      results = response.data.results
+      for (var i=0; i<3; i++) {
+        console.log(results[i].id)
+        const playUrl = results[i].poster_path
+        const playPosterLink = document.createElement('a')
+        const playPoster = document.createElement('img')
+        playPosterLink.setAttribute('href', `${results[i].id}/movie_detail/`)
+        playPoster.src = `https://image.tmdb.org/t/p/w342/${playUrl}`
+        playPoster.style.height = '27vw'
+        playPosterLink.append(playPoster)
+        nowPlayings.append(playPosterLink)
+      }
+      // console.log(response.data.results[0].title)
+      // console.log(response.data.results[0].poster_path)
+    })
+    .catch(function(error){
+      console.log(error)
+    })
+  })
+
+</script>
+
+{% endblock %}
